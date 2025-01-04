@@ -10,17 +10,24 @@ public class PickupManager : MonoBehaviour
     public LayerMask pickupLayer; // Layer to specify pickup objects
     public TextMeshProUGUI woodText; // TextMeshPro UI for wood count
     public TextMeshProUGUI tireText; // TextMeshPro UI for tire count
+    public TextMeshProUGUI metalText; // TextMeshPro UI for metal count
+    public TextMeshProUGUI currencyText; // TextMeshPro UI for player currency
 
-    // Dictionary to store counts for each item type
     private Dictionary<string, int> inventory = new Dictionary<string, int>();
+    private int playerCurrency = 0; // Player's currency
+    public Animator animator;  // Animator reference
 
     void Start()
     {
         // Initialize inventory with default values
         inventory["Wood"] = 0;
         inventory["Tire"] = 0;
+        inventory["Metal"] = 0;
 
         UpdateUI();
+
+        // Get the Animator component
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -43,6 +50,9 @@ public class PickupManager : MonoBehaviour
 
             if (!string.IsNullOrEmpty(itemType))
             {
+                // Trigger the pick-up animation
+                animator.SetTrigger("PickupTrigger");
+
                 // Increment the inventory count for the item type
                 inventory[itemType]++;
                 Debug.Log($"Picked up: {itemType} ({inventory[itemType]} total)");
@@ -67,6 +77,10 @@ public class PickupManager : MonoBehaviour
         {
             return "Tire";
         }
+        else if (obj.CompareTag("Metal"))
+        {
+            return "Metal";
+        }
 
         return null; // Not a pickable item
     }
@@ -76,6 +90,32 @@ public class PickupManager : MonoBehaviour
         // Update the TextMeshPro UI with the current inventory counts
         woodText.text = "Wood: " + inventory["Wood"];
         tireText.text = "Tire: " + inventory["Tire"];
+        metalText.text = "Metal: " + inventory["Metal"];
+        currencyText.text = "Coins: " + playerCurrency;
+    }
+
+    public int GetInventoryCount(string itemType)
+    {
+        if (inventory.ContainsKey(itemType))
+        {
+            return inventory[itemType];
+        }
+        return 0;
+    }
+
+    public void ClearItem(string itemType)
+    {
+        if (inventory.ContainsKey(itemType))
+        {
+            inventory[itemType] = 0;
+            UpdateUI();
+        }
+    }
+
+    public void AddCurrency(int amount)
+    {
+        playerCurrency += amount;
+        UpdateUI();
     }
 
     // To visualize the pickup radius in the editor
@@ -85,3 +125,4 @@ public class PickupManager : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, pickupRadius);
     }
 }
+
