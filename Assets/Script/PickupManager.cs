@@ -15,6 +15,7 @@ public class PickupManager : MonoBehaviour
 
     private Dictionary<string, int> inventory = new Dictionary<string, int>();
     private int playerCurrency = 0; // Player's currency
+    public Animator animator;  // Animator reference
 
     void Start()
     {
@@ -24,6 +25,9 @@ public class PickupManager : MonoBehaviour
         inventory["Metal"] = 0;
 
         UpdateUI();
+
+        // Get the Animator component
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -46,6 +50,9 @@ public class PickupManager : MonoBehaviour
 
             if (!string.IsNullOrEmpty(itemType))
             {
+                // Trigger the pick-up animation
+                animator.SetTrigger("PickupTrigger");
+
                 // Increment the inventory count for the item type
                 inventory[itemType]++;
                 Debug.Log($"Picked up: {itemType} ({inventory[itemType]} total)");
@@ -118,3 +125,4 @@ public class PickupManager : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, pickupRadius);
     }
 }
+
