@@ -8,6 +8,7 @@ TagManager:
   - Pickup
   - Wood
   - Tire
+  - Metal
   layers:
   - Default
   - TransparentFX
