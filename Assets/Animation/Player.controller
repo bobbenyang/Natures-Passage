@@ -7,8 +7,8 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Pickup
-  m_Speed: 3
+  m_Name: Clean
+  m_Speed: 4
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -6129276376168722097}
@@ -89,7 +89,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: PickupTrigger
+  - m_Name: Clean
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -142,7 +142,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: PickupTrigger
+    m_ConditionEvent: Clean
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7238521770541406879}

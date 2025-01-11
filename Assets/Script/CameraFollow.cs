@@ -4,21 +4,24 @@ public class CameraFollow : MonoBehaviour
 {
     public Transform target; // Reference to the cube (player)
     public Vector3 offset = new Vector3(0, 5, -10); // Default camera offset
-    public float smoothSpeed = 0.125f; // Smoothness factor for camera movement
+    public float smoothSpeed = 0.1f; // Smoothness factor for camera movement
+    public float rotationSpeed = 5f; // Speed to rotate towards the player
+
+    private Vector3 velocity = Vector3.zero;
 
     void LateUpdate()
     {
-        // Keep the camera's height constant by ignoring the target's vertical position
+        if (target == null)
+            return;
+
+        // Calculate desired position with offset
         Vector3 desiredPosition = target.position + offset;
-        desiredPosition.y = transform.position.y; // Maintain the camera's current height
+        
+        // Smoothly move towards the target position using SmoothDamp
+        transform.position = Vector3.SmoothDamp(transform.position, desiredPosition, ref velocity, smoothSpeed);
 
-        // Smoothly interpolate between the current position and the desired position
-        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
-
-        // Apply the smoothed position to the camera
-        transform.position = smoothedPosition;
-
-        // Optionally look at the target
-        transform.LookAt(new Vector3(target.position.x, transform.position.y, target.position.z));
+        // Gradually rotate the camera to look at the target
+        Quaternion lookRotation = Quaternion.LookRotation(target.position - transform.position);
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed);
     }
 }
