@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Trash
+  - flower
+  - Flower
   layers:
   - Default
   - TransparentFX
