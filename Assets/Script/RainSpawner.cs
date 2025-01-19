@@ -6,22 +6,37 @@ public class RainSpawner : MonoBehaviour
     [Header("Rain Settings")]
     public GameObject rainPrefab; // The prefab to spawn
     public Vector3 spawnArea = new Vector3(10, 1, 10); // Size of the spawn area
-    public float spawnRate = 0.1f; // Time interval between spawns
+    public float initialSpawnRate = 1f; // Initial time interval between spawns
+    public float finalSpawnRate = 0.1f; // Final time interval between spawns
+    public float rainDuration = 10f; // Total duration of the rain (in seconds)
+    public float rateIncreaseDuration = 5f; // Duration over which the drop rate increases
 
     [Header("Spawn Position Offset")]
     public float spawnHeight = 10f; // Height from which the raindrops fall
 
     private void Start()
     {
-        StartCoroutine(SpawnRain());
+        StartCoroutine(RainController());
     }
 
-    private IEnumerator SpawnRain()
+    private IEnumerator RainController()
     {
-        while (true)
+        float elapsedTime = 0f;
+        float currentSpawnRate = initialSpawnRate;
+
+        while (elapsedTime < rainDuration)
         {
+            // Adjust the spawn rate only during the rateIncreaseDuration
+            if (elapsedTime < rateIncreaseDuration)
+            {
+                currentSpawnRate = Mathf.Lerp(initialSpawnRate, finalSpawnRate, elapsedTime / rateIncreaseDuration);
+            }
+
+            // Spawn a raindrop and wait for the current spawn rate
             SpawnRaindrop();
-            yield return new WaitForSeconds(spawnRate);
+            yield return new WaitForSeconds(currentSpawnRate);
+
+            elapsedTime += currentSpawnRate;
         }
     }
 
