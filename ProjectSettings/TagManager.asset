@@ -5,10 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - Pickup
-  - Wood
-  - Tire
-  - Metal
+  - Trash
   layers:
   - Default
   - TransparentFX

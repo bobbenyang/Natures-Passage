@@ -17,6 +17,34 @@ public class PickupManager : MonoBehaviour
     private int playerCurrency = 0; // Player's currency
     public Animator animator;  // Animator reference
 
+    public GameObject pickupPopupPrefab; // Assign a prefab for the popup in the inspector
+    public Transform popupSpawnPoint;    // Point above the player’s head to spawn the popup
+
+    void ShowPickupPopup(string itemType, int amount, Vector3 position)
+    {
+        if (pickupPopupPrefab != null)
+        {
+            // Instantiate the popup at the item's position with an offset
+            Vector3 popupPosition = position + new Vector3(0, 2f, 0); // Slightly above the item
+            GameObject popup = Instantiate(pickupPopupPrefab, popupPosition, Quaternion.identity);
+            
+            TextMeshProUGUI popupText = popup.GetComponentInChildren<TextMeshProUGUI>();
+            if (popupText != null)
+            {
+                popupText.text = $"+{amount} {itemType}";
+            }
+
+            Destroy(popup, 1.5f); // Destroy the popup after 1.5 seconds
+        }
+    }
+
+
+    public int GetCurrency()
+    {
+        return playerCurrency;
+    }
+
+
     void Start()
     {
         // Initialize inventory with default values
@@ -41,7 +69,6 @@ public class PickupManager : MonoBehaviour
 
     void PickupObjects()
     {
-        // Find all colliders within the pickup radius on the specified layer
         Collider[] objectsInRange = Physics.OverlapSphere(transform.position, pickupRadius, pickupLayer);
 
         foreach (Collider obj in objectsInRange)
@@ -50,17 +77,14 @@ public class PickupManager : MonoBehaviour
 
             if (!string.IsNullOrEmpty(itemType))
             {
-                // Trigger the pick-up animation
                 animator.SetTrigger("PickupTrigger");
-
-                // Increment the inventory count for the item type
                 inventory[itemType]++;
+                
+                // Show popup with item name and amount
+                ShowPickupPopup(itemType, 1, obj.transform.position);
+                
                 Debug.Log($"Picked up: {itemType} ({inventory[itemType]} total)");
-
-                // Update the UI
                 UpdateUI();
-
-                // Destroy the object after picking it up
                 Destroy(obj.gameObject);
             }
         }

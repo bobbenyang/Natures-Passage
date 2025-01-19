@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Puzzle.unity
+    guid: aeeb15d263dbd49859f54580c9cd7f77
+  - enabled: 1
+    path: Assets/Scenes/HousePuzzle.unity
+    guid: 518fb1222f3c2417b92fc66727fb7a95
   m_configObjects: {}
