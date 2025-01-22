@@ -13,6 +13,11 @@ public class DragTrash : MonoBehaviour
 
     public float dragSpeed = 10f; // Speed to move the object
 
+    public bool IsDragging()
+    {
+        return isDragging;
+    }
+
     void Start()
     {
         mainCamera = Camera.main;

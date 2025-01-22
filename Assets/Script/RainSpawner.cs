@@ -10,6 +10,7 @@ public class RainSpawner : MonoBehaviour
     public float finalSpawnRate = 0.1f; // Final time interval between spawns
     public float rainDuration = 10f; // Total duration of the rain (in seconds)
     public float rateIncreaseDuration = 5f; // Duration over which the drop rate increases
+    public float initialDuration = 3f; // Duration to maintain the initial spawn rate
 
     [Header("Spawn Position Offset")]
     public float spawnHeight = 10f; // Height from which the raindrops fall
@@ -22,20 +23,28 @@ public class RainSpawner : MonoBehaviour
     private IEnumerator RainController()
     {
         float elapsedTime = 0f;
-        float currentSpawnRate = initialSpawnRate;
 
+        // Phase 1: Initial constant spawn rate
+        while (elapsedTime < initialDuration)
+        {
+            SpawnRaindrop();
+            yield return new WaitForSeconds(initialSpawnRate);
+            elapsedTime += initialSpawnRate;
+        }
+
+        // Phase 2: Gradual increase in spawn rate
+        float increaseStartTime = elapsedTime; // Track when this phase starts
         while (elapsedTime < rainDuration)
         {
-            // Adjust the spawn rate only during the rateIncreaseDuration
-            if (elapsedTime < rateIncreaseDuration)
-            {
-                currentSpawnRate = Mathf.Lerp(initialSpawnRate, finalSpawnRate, elapsedTime / rateIncreaseDuration);
-            }
+            float timeSinceIncreaseStart = elapsedTime - increaseStartTime;
 
-            // Spawn a raindrop and wait for the current spawn rate
+            // Adjust the spawn rate during the rateIncreaseDuration
+            float currentSpawnRate = timeSinceIncreaseStart < rateIncreaseDuration
+                ? Mathf.Lerp(initialSpawnRate, finalSpawnRate, timeSinceIncreaseStart / rateIncreaseDuration)
+                : finalSpawnRate;
+
             SpawnRaindrop();
             yield return new WaitForSeconds(currentSpawnRate);
-
             elapsedTime += currentSpawnRate;
         }
     }
