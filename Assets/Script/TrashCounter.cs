@@ -12,7 +12,13 @@ public class TrashCounter : MonoBehaviour
     [Header("UI Components")]
     public TextMeshProUGUI trashCountText; // Assign your TextMeshPro UI component here
 
+    [Header("Blink Settings")]
+    public Color normalColor = Color.white; // Default text color
+    public Color alertColor = Color.red; // Color when blinking
+    public float blinkSpeed = 0.5f; // Speed of blinking (seconds per blink)
+
     private int trashCount = 0;
+    private bool isBlinking = false;
 
     private void Update()
     {
@@ -44,6 +50,37 @@ public class TrashCounter : MonoBehaviour
         if (trashCountText != null)
         {
             trashCountText.text = "Trash in Area: " + trashCount;
+
+            if (trashCount > 100)
+            {
+                if (!isBlinking)
+                {
+                    StartCoroutine(BlinkText());
+                }
+            }
+            else
+            {
+                if (isBlinking)
+                {
+                    StopCoroutine(BlinkText());
+                    isBlinking = false;
+                    trashCountText.color = normalColor; // Reset to normal color
+                }
+            }
+        }
+    }
+
+    private System.Collections.IEnumerator BlinkText()
+    {
+        isBlinking = true;
+
+        while (true)
+        {
+            trashCountText.color = alertColor; // Change to alert color
+            yield return new WaitForSeconds(blinkSpeed);
+
+            trashCountText.color = normalColor; // Change back to normal color
+            yield return new WaitForSeconds(blinkSpeed);
         }
     }
 
