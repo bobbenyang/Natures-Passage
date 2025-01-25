@@ -1,29 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
-public class TrashCounter : MonoBehaviour
+public class TrashCounterBar : MonoBehaviour
 {
     [Header("Detection Settings")]
     public Vector3 detectionCenter; // Center of the detection area (local to this object)
     public Vector3 detectionSize = new Vector3(5f, 5f, 5f); // Size of the detection area (width, height, depth)
 
     [Header("UI Components")]
-    public TextMeshProUGUI trashCountText; // Assign your TextMeshPro UI component here
-
-    [Header("Blink Settings")]
-    public Color normalColor = Color.white; // Default text color
-    public Color alertColor = Color.red; // Color when blinking
-    public float blinkSpeed = 0.5f; // Speed of blinking (seconds per blink)
+    public Image trashBar; // Assign the UI bar here (Image component)
+    
+    [Header("Bar Settings")]
+    public int maxTrash = 100; // Maximum trash amount the bar represents
+    public Gradient barColor; // Gradient for bar color (green to red)
 
     private int trashCount = 0;
-    private bool isBlinking = false;
 
     private void Update()
     {
         CountTrashInArea();
-        UpdateTrashCountUI();
+        UpdateTrashBar();
     }
 
     private void CountTrashInArea()
@@ -45,42 +43,18 @@ public class TrashCounter : MonoBehaviour
         }
     }
 
-    private void UpdateTrashCountUI()
+    private void UpdateTrashBar()
     {
-        if (trashCountText != null)
+        if (trashBar != null)
         {
-            trashCountText.text = "Trash in Area: " + trashCount;
+            // Clamp the trash count to the maximum allowed value
+            float fillAmount = Mathf.Clamp01((float)trashCount / maxTrash);
 
-            if (trashCount > 100)
-            {
-                if (!isBlinking)
-                {
-                    StartCoroutine(BlinkText());
-                }
-            }
-            else
-            {
-                if (isBlinking)
-                {
-                    StopCoroutine(BlinkText());
-                    isBlinking = false;
-                    trashCountText.color = normalColor; // Reset to normal color
-                }
-            }
-        }
-    }
+            // Update the bar fill amount
+            trashBar.fillAmount = fillAmount;
 
-    private System.Collections.IEnumerator BlinkText()
-    {
-        isBlinking = true;
-
-        while (true)
-        {
-            trashCountText.color = alertColor; // Change to alert color
-            yield return new WaitForSeconds(blinkSpeed);
-
-            trashCountText.color = normalColor; // Change back to normal color
-            yield return new WaitForSeconds(blinkSpeed);
+            // Update the bar color based on the gradient
+            trashBar.color = barColor.Evaluate(fillAmount);
         }
     }
 
