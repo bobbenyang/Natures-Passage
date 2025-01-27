@@ -11,6 +11,16 @@ public class TimerController : MonoBehaviour
     public TextMeshProUGUI messageText1; // Reference to the first Message text
     public TextMeshProUGUI messageText2; // Reference to the second Message text
     public Button restartButton; // Reference to the Restart button
+    public Button secondButton; // Reference to the second button
+
+    public TrashDetector trashDetector; // Reference to the TrashDetector script
+    public int trashThreshold = 5; // Threshold to display different messages
+
+    [Header("Messages")]
+    public string highTrashMessage = "Too much trash! We need to clean up!"; // Message for high trash count
+    public string lowTrashMessage = "Good job! The area is clean."; // Message for low trash count
+    public string highTrashDetails = "Trash detected: {count}"; // Detailed message for high trash count
+    public string lowTrashDetails = "Trash detected: {count}"; // Detailed message for low trash count
 
     private float currentTime;
     private bool isCountingDown = true;
@@ -20,13 +30,15 @@ public class TimerController : MonoBehaviour
         // Initialize variables
         currentTime = countdownTime;
 
-        // Ensure messages and button are hidden initially
+        // Ensure messages and buttons are hidden initially
         messageText1.gameObject.SetActive(false);
         messageText2.gameObject.SetActive(false);
         restartButton.gameObject.SetActive(false);
+        secondButton.gameObject.SetActive(false);
 
-        // Assign a function to the button
+        // Assign functions to the buttons
         restartButton.onClick.AddListener(RestartTimer);
+        secondButton.onClick.AddListener(SecondButtonAction);
     }
 
     void Update()
@@ -51,10 +63,27 @@ public class TimerController : MonoBehaviour
     {
         // Hide timer and show the messages and button
         timerText.gameObject.SetActive(false);
+        restartButton.gameObject.SetActive(true);
+
+        // Get the current trash count from TrashDetector
+        int trashCount = trashDetector.GetTrashCount();
+
+        // Display messages based on trash count
+        if (trashCount >= trashThreshold)
+        {
+            messageText1.text = highTrashMessage;
+            messageText2.text = highTrashDetails.Replace("{count}", trashCount.ToString()).Replace("\\n", "\n");
+        }
+        else
+        {
+            messageText1.text = lowTrashMessage;
+            messageText2.text = lowTrashDetails.Replace("{count}", trashCount.ToString()).Replace("\\n", "\n");
+        }
+
         messageText1.gameObject.SetActive(true);
         messageText2.gameObject.SetActive(true);
-        restartButton.gameObject.SetActive(true);
     }
+
 
     void RestartTimer()
     {
@@ -65,5 +94,12 @@ public class TimerController : MonoBehaviour
         messageText1.gameObject.SetActive(false);
         messageText2.gameObject.SetActive(false);
         restartButton.gameObject.SetActive(false);
+        secondButton.gameObject.SetActive(false);
+    }
+
+    void SecondButtonAction()
+    {
+        // Define what the second button does here
+        Debug.Log("Second button clicked!");
     }
 }

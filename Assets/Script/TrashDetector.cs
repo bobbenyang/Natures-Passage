@@ -19,6 +19,21 @@ public class TrashDetector : MonoBehaviour
         DetectTrash();
     }
 
+    public int GetTrashCount()
+    {
+        Collider[] detectedObjects = Physics.OverlapBox(transform.position + center, halfExtents, Quaternion.identity, detectionLayer);
+        int count = 0;
+        foreach (Collider obj in detectedObjects)
+        {
+            if (obj.CompareTag("Trash"))
+            {
+                count++;
+            }
+        }
+        return count;
+    }
+
+
     void DetectTrash()
     {
         // Perform the OverlapBox detection
@@ -37,6 +52,7 @@ public class TrashDetector : MonoBehaviour
         // Update the UI bar
         UpdateTrashBar(trashCount);
     }
+
 
     void UpdateTrashBar(int trashCount)
     {
