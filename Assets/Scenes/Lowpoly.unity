@@ -480,7 +480,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -167, y: 88}
+  m_AnchoredPosition: {x: -195, y: 156}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &67608027
@@ -2972,6 +2972,7 @@ RectTransform:
   - {fileID: 989092860}
   - {fileID: 915924852}
   - {fileID: 640693338}
+  - {fileID: 449531374}
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2980,6 +2981,79 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &449531373
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 449531374}
+  - component: {fileID: 449531376}
+  - component: {fileID: 449531375}
+  m_Layer: 5
+  m_Name: RawImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &449531374
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449531373}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 435035696}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 8.875, y: 451.61}
+  m_SizeDelta: {x: 1050.251, y: 77.22}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &449531375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449531373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: 415bcdea8641f4f4fbd1dd010719ea2f, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &449531376
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449531373}
+  m_CullTransparentMesh: 1
 --- !u!1001 &454413500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3084,7 +3158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragBoxSize: {x: 8, y: 8, z: 8}
-  dragSpeed: 10
+  dragSpeed: 15
   areaIndicatorPrefab: {fileID: 3118886884744556794, guid: be0c2e5380011473b93fdd29691734a6, type: 3}
 --- !u!4 &471344558
 Transform:
@@ -3614,9 +3688,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rainPrefab: {fileID: 4903565535990932852, guid: e3179b2ecbe74441fbe013a70c60551f, type: 3}
   spawnArea: {x: 40, y: 1, z: 40}
-  initialSpawnRate: 2
-  finalSpawnRate: 0.5
-  rainDuration: 30
+  initialSpawnRate: 3
+  finalSpawnRate: 1
+  rainDuration: 40
   rateIncreaseDuration: 5
   initialDuration: 10
   spawnHeight: 20
@@ -3666,8 +3740,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rainPrefab: {fileID: 7953071170460718641, guid: b76695b584b5b4704a3bfac2aa9e1cb9, type: 3}
   spawnArea: {x: 40, y: 1, z: 40}
-  initialSpawnRate: 2
-  finalSpawnRate: 0.5
+  initialSpawnRate: 3
+  finalSpawnRate: 1
   rainDuration: 40
   rateIncreaseDuration: 5
   initialDuration: 10
@@ -3962,8 +4036,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8, y: 436.233}
-  m_SizeDelta: {x: 1003.4, y: 136.653}
+  m_AnchoredPosition: {x: 9.488, y: 448.137}
+  m_SizeDelta: {x: 1006.376, y: 112.844}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &640693339
 MonoBehaviour:
@@ -5125,13 +5199,13 @@ MonoBehaviour:
   secondButton: {fileID: 915924853}
   trashDetector: {fileID: 817827250}
   trashThreshold: 100
-  highTrashMessage: Oh No! There is still too much trash! \\n Each Netherlands resident
-    produced 456 kg of waste last year  \\n But if you keep trying, perhaps you could
-    do better next time?
-  lowTrashMessage: 'Congratulations! You removed enough the trash from the area so
-    people can pick the rest up! \\n In Netherlands. In Netherlands, the recycling
-    rate of trash is more than 50%, so make sure you throw all the trash into the
-    bins. '
+  highTrashMessage: "Oh No! There is still too much trash! \n\nEach Netherlands resident
+    produced 456 kg of waste last year  \n\nBut if you keep trying, perhaps you could
+    do better next time?\n\nTrash left in area: {count}"
+  lowTrashMessage: "Congratulations! You removed enough the trash from the area so
+    people can pick the rest up! \n\nIn Netherlands, the recycling rate of trash
+    is more than 50%, so make sure you throw all the trash into the bins. \n\nTrash
+    left in area {count}"
   highTrashDetails: Still too much trash
   lowTrashDetails: 'You did it! '
 --- !u!114 &817827249
@@ -5792,8 +5866,8 @@ MonoBehaviour:
   rainPrefab: {fileID: 6080228653116567945, guid: 868eb74208b934c12b86e67500916c53, type: 3}
   spawnArea: {x: 40, y: 1, z: 40}
   initialSpawnRate: 2
-  finalSpawnRate: 0.05
-  rainDuration: 30
+  finalSpawnRate: 0.1
+  rainDuration: 40
   rateIncreaseDuration: 5
   initialDuration: 10
   spawnHeight: 20
@@ -8229,8 +8303,8 @@ MonoBehaviour:
   rainPrefab: {fileID: 6502109918540467822, guid: ee5b9b3e88aa54469a3f6f587f31b5e0, type: 3}
   spawnArea: {x: 40, y: 1, z: 40}
   initialSpawnRate: 2
-  finalSpawnRate: 0.05
-  rainDuration: 30
+  finalSpawnRate: 0.1
+  rainDuration: 40
   rateIncreaseDuration: 5
   initialDuration: 10
   spawnHeight: 20
@@ -10533,7 +10607,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -150, y: 188}
+  m_AnchoredPosition: {x: -154, y: 276}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1836182541
@@ -10664,9 +10738,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rainPrefab: {fileID: 3308186413718675399, guid: b9795dfa49a954da1a41d4c2460f1413, type: 3}
   spawnArea: {x: 40, y: 1, z: 40}
-  initialSpawnRate: 2
-  finalSpawnRate: 0.5
-  rainDuration: 30
+  initialSpawnRate: 3
+  finalSpawnRate: 1
+  rainDuration: 40
   rateIncreaseDuration: 5
   initialDuration: 10
   spawnHeight: 20
@@ -11545,8 +11619,8 @@ MonoBehaviour:
   rainPrefab: {fileID: 4703894408106469497, guid: 0a1854f7e6dfc4ed7a72b65083ca1299, type: 3}
   spawnArea: {x: 40, y: 1, z: 40}
   initialSpawnRate: 2
-  finalSpawnRate: 0.05
-  rainDuration: 30
+  finalSpawnRate: 0.1
+  rainDuration: 40
   rateIncreaseDuration: 5
   initialDuration: 10
   spawnHeight: 20

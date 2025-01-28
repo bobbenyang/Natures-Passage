@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1837267, g: 0.22913569, b: 0.30473384, a: 1}
+  m_IndirectSpecularColor: {r: 0.18027647, g: 0.22570595, b: 0.30691922, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7854,7 +7854,7 @@ MonoBehaviour:
   rainPrefab: {fileID: 2695862179264703758, guid: 711cceccfdc7d4097a982162c72628f1, type: 3}
   spawnArea: {x: 40, y: 1, z: 40}
   initialSpawnRate: 3
-  finalSpawnRate: 0.05
+  finalSpawnRate: 0.2
   rainDuration: 50
   rateIncreaseDuration: 5
   initialDuration: 20
@@ -12788,7 +12788,7 @@ MonoBehaviour:
   rainPrefab: {fileID: 7510844573480564147, guid: de54d05dbcd144cd5bbd9f49738aebd7, type: 3}
   spawnArea: {x: 40, y: 1, z: 40}
   initialSpawnRate: 3
-  finalSpawnRate: 0.05
+  finalSpawnRate: 0.2
   rainDuration: 50
   rateIncreaseDuration: 5
   initialDuration: 20
@@ -17830,14 +17830,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1721213812}
-  m_LocalRotation: {x: 0.33437598, y: 0.12146589, z: 0.25845483, w: 0.8981314}
+  m_LocalRotation: {x: 0.5292339, y: 0.17688318, z: 0.22419904, w: 0.79897356}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 32.537, y: 27.634, z: 40.319}
+  m_LocalEulerAnglesHint: {x: 50.029, y: 54.038, z: 58.118}
 --- !u!1 &1723284963
 GameObject:
   m_ObjectHideFlags: 0
@@ -18615,7 +18615,7 @@ MonoBehaviour:
   rainPrefab: {fileID: 6029257085025227982, guid: d1709dfbbe26f47a39f04f19d1daa951, type: 3}
   spawnArea: {x: 40, y: 1, z: 40}
   initialSpawnRate: 3
-  finalSpawnRate: 0.05
+  finalSpawnRate: 0.2
   rainDuration: 50
   rateIncreaseDuration: 5
   initialDuration: 20
