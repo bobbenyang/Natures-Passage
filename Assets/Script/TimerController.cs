@@ -17,9 +17,13 @@ public class TimerController : MonoBehaviour
     public int trashThreshold = 5; // Threshold to display different messages
 
     [Header("Messages")]
+    [TextArea]
     public string highTrashMessage = "Too much trash! We need to clean up!"; // Message for high trash count
+    [TextArea]
     public string lowTrashMessage = "Good job! The area is clean."; // Message for low trash count
+    [TextArea]
     public string highTrashDetails = "Trash detected: {count}"; // Detailed message for high trash count
+    [TextArea]
     public string lowTrashDetails = "Trash detected: {count}"; // Detailed message for low trash count
 
     private float currentTime;
@@ -61,23 +65,30 @@ public class TimerController : MonoBehaviour
 
     void ShowEndScreen()
     {
-        // Hide timer and show the messages and button
+        // Hide timer and show the messages and buttons
         timerText.gameObject.SetActive(false);
         restartButton.gameObject.SetActive(true);
+        secondButton.gameObject.SetActive(true);
 
         // Get the current trash count from TrashDetector
         int trashCount = trashDetector.GetTrashCount();
 
+        // Replace `{count}` with the actual trash count in the messages
+        string processedHighTrashMessage = highTrashMessage.Replace("{count}", trashCount.ToString());
+        string processedLowTrashMessage = lowTrashMessage.Replace("{count}", trashCount.ToString());
+        string processedHighTrashDetails = highTrashDetails.Replace("{count}", trashCount.ToString());
+        string processedLowTrashDetails = lowTrashDetails.Replace("{count}", trashCount.ToString());
+
         // Display messages based on trash count
         if (trashCount >= trashThreshold)
         {
-            messageText1.text = highTrashMessage;
-            messageText2.text = highTrashDetails.Replace("{count}", trashCount.ToString()).Replace("\\n", "\n");
+            messageText1.text = processedHighTrashMessage;
+            messageText2.text = processedHighTrashDetails;
         }
         else
         {
-            messageText1.text = lowTrashMessage;
-            messageText2.text = lowTrashDetails.Replace("{count}", trashCount.ToString()).Replace("\\n", "\n");
+            messageText1.text = processedLowTrashMessage;
+            messageText2.text = processedLowTrashDetails;
         }
 
         messageText1.gameObject.SetActive(true);
