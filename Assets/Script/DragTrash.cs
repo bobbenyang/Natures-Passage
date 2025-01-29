@@ -10,22 +10,9 @@ public class DragTrash : MonoBehaviour
 
     public Vector3 dragBoxSize = new Vector3(5f, 5f, 5f); // Size of the detection box
     public float dragSpeed = 10f; // Speed for dragging the objects
-    public GameObject areaIndicatorPrefab; // Prefab for the draggable area indicator
-
-    private GameObject areaIndicator; // Instance of the area indicator
-    private bool isDragging = false; // Tracks whether the player is dragging
-
     void Start()
     {
         mainCamera = Camera.main;
-
-        // Instantiate the area indicator
-        if (areaIndicatorPrefab != null)
-        {
-            areaIndicator = Instantiate(areaIndicatorPrefab);
-            areaIndicator.transform.localScale = dragBoxSize;
-            areaIndicator.SetActive(false); // Hide it initially
-        }
     }
 
     void Update()
@@ -37,11 +24,6 @@ public class DragTrash : MonoBehaviour
         else if (Input.GetMouseButtonUp(0)) // Left mouse button released
         {
             DropObjects();
-        }
-
-        if (isDragging && areaIndicator != null)
-        {
-            UpdateAreaIndicatorPosition();
         }
     }
 
@@ -64,13 +46,6 @@ public class DragTrash : MonoBehaviour
             {
                 // Get the position of the clicked object
                 Vector3 center = hit.collider.transform.position;
-
-                // Show the area indicator and start dragging
-                if (areaIndicator != null)
-                {
-                    areaIndicator.SetActive(true);
-                    isDragging = true;
-                }
 
                 // Find all trash objects within the box
                 Collider[] colliders = Physics.OverlapBox(center, dragBoxSize / 2);
@@ -111,16 +86,7 @@ public class DragTrash : MonoBehaviour
             }
         }
 
-        selectedRigidbodies.Clear();
-
-        // Hide the area indicator
-        if (areaIndicator != null)
-        {
-            areaIndicator.SetActive(false);
-        }
-
-        isDragging = false;
-    }
+        selectedRigidbodies.Clear();    }
 
     void DragObjects()
     {
@@ -134,12 +100,6 @@ public class DragTrash : MonoBehaviour
                 rb.velocity = force;
             }
         }
-    }
-
-    void UpdateAreaIndicatorPosition()
-    {
-        Vector3 mouseWorldPosition = GetMouseWorldPosition();
-        areaIndicator.transform.position = new Vector3(mouseWorldPosition.x, mouseWorldPosition.y, mouseWorldPosition.z);
     }
 
     Vector3 GetMouseWorldPosition()
