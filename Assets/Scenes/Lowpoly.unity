@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18387644, g: 0.22879101, b: 0.30175215, a: 1}
+  m_IndirectSpecularColor: {r: 0.46596068, g: 0.51562655, b: 0.5853834, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -320,7 +320,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8450746412194139794, guid: f381ae8e8f34b8e4ca4a847775c0e60f, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8450746412194139794, guid: f381ae8e8f34b8e4ca4a847775c0e60f, type: 3}
       propertyPath: m_LocalScale.x
@@ -385,7 +385,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4341311372294019232, guid: 879432462848f13449a27f036ebd2e8f, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4341311372294019232, guid: 879432462848f13449a27f036ebd2e8f, type: 3}
       propertyPath: m_LocalScale.x
@@ -1029,7 +1029,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 32.537, y: 27.634, z: 40.319}
 --- !u!1001 &95813362
 PrefabInstance:
@@ -2974,7 +2974,7 @@ RectTransform:
   - {fileID: 640693338}
   - {fileID: 449531374}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3173,7 +3173,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &489953994
 PrefabInstance:
@@ -3375,7 +3375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5232095245437698486, guid: 06fee42127b3b4243a1d03df215365e7, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5232095245437698486, guid: 06fee42127b3b4243a1d03df215365e7, type: 3}
       propertyPath: m_LocalScale.x
@@ -3657,58 +3657,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7405846476849834440, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
   m_PrefabInstance: {fileID: 588158756}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &591934514
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 591934516}
-  - component: {fileID: 591934515}
-  m_Layer: 0
-  m_Name: Orange
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &591934515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591934514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c35473a12f6fe45108aea746ab7a732f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rainPrefab: {fileID: 4903565535990932852, guid: e3179b2ecbe74441fbe013a70c60551f, type: 3}
-  spawnArea: {x: 40, y: 1, z: 40}
-  initialSpawnRate: 3
-  finalSpawnRate: 1
-  rainDuration: 40
-  rateIncreaseDuration: 5
-  initialDuration: 10
-  spawnHeight: 20
---- !u!4 &591934516
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591934514}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.4, y: 37.2, z: -24.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &597977729
 GameObject:
   m_ObjectHideFlags: 0
@@ -3720,7 +3668,7 @@ GameObject:
   - component: {fileID: 597977731}
   - component: {fileID: 597977730}
   m_Layer: 0
-  m_Name: Apple
+  m_Name: Pile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3738,11 +3686,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c35473a12f6fe45108aea746ab7a732f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rainPrefab: {fileID: 7953071170460718641, guid: b76695b584b5b4704a3bfac2aa9e1cb9, type: 3}
-  spawnArea: {x: 40, y: 1, z: 40}
+  rainPrefab: {fileID: 791497284589064652, guid: 88c1a64deb807406382dbd72af5cf7b6, type: 3}
+  spawnArea: {x: 30, y: 1, z: 40}
   initialSpawnRate: 3
-  finalSpawnRate: 1
-  rainDuration: 40
+  finalSpawnRate: 1.5
+  rainDuration: 60
   rateIncreaseDuration: 5
   initialDuration: 10
   spawnHeight: 20
@@ -3754,7 +3702,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 597977729}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.4, y: 37.2, z: -24.1}
+  m_LocalPosition: {x: 19.3, y: 37.2, z: -24.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3924,7 +3872,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &636615947
 PrefabInstance:
@@ -4036,8 +3984,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.488, y: 448.137}
-  m_SizeDelta: {x: 1006.376, y: 112.844}
+  m_AnchoredPosition: {x: 11.734, y: 449.426}
+  m_SizeDelta: {x: 1026.336, y: 110.265}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &640693339
 MonoBehaviour:
@@ -5177,7 +5125,7 @@ Transform:
   m_Children:
   - {fileID: 286220318}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &817827248
 MonoBehaviour:
@@ -5220,7 +5168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a189a7343a349dd9f9a55b369e1710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: DadMom
+  nextSceneName: Tutorial2
 --- !u!114 &817827250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5864,9 +5812,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rainPrefab: {fileID: 6080228653116567945, guid: 868eb74208b934c12b86e67500916c53, type: 3}
-  spawnArea: {x: 40, y: 1, z: 40}
-  initialSpawnRate: 2
-  finalSpawnRate: 0.1
+  spawnArea: {x: 30, y: 1, z: 40}
+  initialSpawnRate: 3
+  finalSpawnRate: 0.8
   rainDuration: 40
   rateIncreaseDuration: 5
   initialDuration: 10
@@ -5879,7 +5827,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 926743998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.4, y: 37.2, z: -24.1}
+  m_LocalPosition: {x: 19.3, y: 37.2, z: -24.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6568,7 +6516,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2e1cfa12a8211425c865e4e8bcea1501, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.606
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6665,7 +6613,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1066463545
 GameObject:
@@ -8301,10 +8249,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rainPrefab: {fileID: 6502109918540467822, guid: ee5b9b3e88aa54469a3f6f587f31b5e0, type: 3}
-  spawnArea: {x: 40, y: 1, z: 40}
-  initialSpawnRate: 2
-  finalSpawnRate: 0.1
-  rainDuration: 40
+  spawnArea: {x: 30, y: 1, z: 40}
+  initialSpawnRate: 3
+  finalSpawnRate: 0.8
+  rainDuration: 60
   rateIncreaseDuration: 5
   initialDuration: 10
   spawnHeight: 20
@@ -8316,7 +8264,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1347245323}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.4, y: 37.2, z: -24.1}
+  m_LocalPosition: {x: 19.3, y: 37.2, z: -24.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8812,7 +8760,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1485070295
 GameObject:
@@ -9440,7 +9388,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8619805929223589546, guid: b933b12f828c2fc45b6528e41b2e8824, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8619805929223589546, guid: b933b12f828c2fc45b6528e41b2e8824, type: 3}
       propertyPath: m_LocalScale.x
@@ -10707,58 +10655,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1836182539}
   m_CullTransparentMesh: 1
---- !u!1 &1841169284
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1841169286}
-  - component: {fileID: 1841169285}
-  m_Layer: 0
-  m_Name: Banana
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1841169285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1841169284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c35473a12f6fe45108aea746ab7a732f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rainPrefab: {fileID: 3308186413718675399, guid: b9795dfa49a954da1a41d4c2460f1413, type: 3}
-  spawnArea: {x: 40, y: 1, z: 40}
-  initialSpawnRate: 3
-  finalSpawnRate: 1
-  rainDuration: 40
-  rateIncreaseDuration: 5
-  initialDuration: 10
-  spawnHeight: 20
---- !u!4 &1841169286
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1841169284}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.4, y: 37.2, z: -24.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1850655979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11357,7 +11253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8008701227405582009, guid: 9a0e848f4199dae46b8c371c6d792998, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8008701227405582009, guid: 9a0e848f4199dae46b8c371c6d792998, type: 3}
       propertyPath: m_LocalScale.x
@@ -11617,10 +11513,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rainPrefab: {fileID: 4703894408106469497, guid: 0a1854f7e6dfc4ed7a72b65083ca1299, type: 3}
-  spawnArea: {x: 40, y: 1, z: 40}
-  initialSpawnRate: 2
-  finalSpawnRate: 0.1
-  rainDuration: 40
+  spawnArea: {x: 30, y: 1, z: 40}
+  initialSpawnRate: 3
+  finalSpawnRate: 0.8
+  rainDuration: 60
   rateIncreaseDuration: 5
   initialDuration: 10
   spawnHeight: 20
@@ -11632,7 +11528,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2057659294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.4, y: 37.2, z: -24.1}
+  m_LocalPosition: {x: 19.3, y: 37.2, z: -24.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11866,7 +11762,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2121191587
 PrefabInstance:
