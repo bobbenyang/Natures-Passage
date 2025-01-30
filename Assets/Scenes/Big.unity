@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45142406, g: 0.50081736, b: 0.5717817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641538, b: 0.5748186, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 502077513c24f45a582fe0b87aba2c70, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2197,7 +2197,7 @@ Animator:
   m_GameObject: {fileID: 177468968}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 0940da46cb529f6458578c054115c1e4, type: 3}
-  m_Controller: {fileID: 9100000, guid: c0c7c70f8bd084b5a8f55091e7d8d2c9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3d7834b9c09bd4d2fa2a223885976b74, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2587,100 +2587,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190636423}
   m_CullTransparentMesh: 1
---- !u!1 &192811404
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 192811406}
-  - component: {fileID: 192811405}
-  m_Layer: 0
-  m_Name: Directional Light (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &192811405
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 192811404}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 1
-  m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!4 &192811406
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 192811404}
-  m_LocalRotation: {x: 0.3228368, y: 0.16035385, z: 0.27273175, w: 0.8920092}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 29.241, y: 31.983, z: 42.553}
 --- !u!1 &192856147
 GameObject:
   m_ObjectHideFlags: 0
@@ -2945,6 +2851,103 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 161bba40a0ae34836aa93902965d4bb3, type: 3}
   m_PrefabInstance: {fileID: 212718326}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &215035666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 215035670}
+  - component: {fileID: 215035669}
+  - component: {fileID: 215035668}
+  - component: {fileID: 215035667}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &215035667
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215035666}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &215035668
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215035666}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &215035669
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215035666}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &215035670
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215035666}
+  m_LocalRotation: {x: -0, y: -0, z: 0.39034396, w: 0.9206691}
+  m_LocalPosition: {x: -31.1, y: 10.6, z: -23}
+  m_LocalScale: {x: 1, y: 50, z: 105}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45.952}
 --- !u!1 &235033271
 GameObject:
   m_ObjectHideFlags: 0
@@ -6725,9 +6728,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2e1cfa12a8211425c865e4e8bcea1501, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -7255,7 +7258,7 @@ Animator:
   m_GameObject: {fileID: 586299385}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 0940da46cb529f6458578c054115c1e4, type: 3}
-  m_Controller: {fileID: 9100000, guid: e4661398d3dec4314a9a62d4799bc11c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3d7834b9c09bd4d2fa2a223885976b74, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -11806,7 +11809,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1014962488
 PrefabInstance:
@@ -11914,9 +11917,9 @@ MonoBehaviour:
   spawnArea: {x: 30, y: 1, z: 40}
   initialSpawnRate: 0.8
   finalSpawnRate: 3
-  rainDuration: 50
+  rainDuration: 80
   rateIncreaseDuration: 5
-  initialDuration: 20
+  initialDuration: 45
   spawnHeight: 20
 --- !u!4 &1020089271
 Transform:
@@ -12485,7 +12488,7 @@ Transform:
   m_Children:
   - {fileID: 1924978751}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1091377553
 MonoBehaviour:
@@ -12518,7 +12521,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   trashBar: {fileID: 606844485}
-  maxTrashCount: 500
+  maxTrashCount: 800
 --- !u!114 &1091377555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12531,21 +12534,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d2174031b9354730b241b5b0ae39652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countdownTime: 100
+  countdownTime: 90
   timerText: {fileID: 971286471}
   messageText1: {fileID: 1102147853}
   messageText2: {fileID: 152483001}
   restartButton: {fileID: 1658013776}
   secondButton: {fileID: 916634749}
   trashDetector: {fileID: 1091377554}
-  trashThreshold: 90
+  trashThreshold: 400
   highTrashMessage: "Oh No! There is still too much trash! \n\nEach Netherlands resident
     produced 456 kg of waste last year  \n\nBut if you keep trying, perhaps you could
     do better next time?\n\nTrash left in area: {count}"
-  lowTrashMessage: "Congratulations! You removed enough the trash from the area so
-    people can pick the rest up! \n\nIn Netherlands, the recycling rate of trash
-    is more than 50%, so make sure you throw all the trash into the bins. \n\nTrash
-    left in area {count}"
+  lowTrashMessage: "Congratulations! Although the trash rained like crazy. You still
+    removed enough the trash from the area! \n\nEach Netherlands resident produced
+    456 kg of waste last year. Thanks to people like you who pick up trash, we don\u2019t
+    see it all over the streets. \n\nTrash left in area: {count}"
   highTrashDetails: Still too much trash
   lowTrashDetails: 'You did it! '
 --- !u!114 &1091377556
@@ -12565,23 +12568,13 @@ MonoBehaviour:
   textArray:
   - Oh no! There are even more trash falling down now. What should we do!?
   - 'Wah...! ,Mom, Dad, I''m scared! '
-  - This is all because of  the we have been ignoring the trash we didn't care about.
-    They have come back and haunt us!
-  - a
-  - aa
-  - aaa
-  - aaaa
-  - aaaaaa
-  - aaaa
+  - 'All the waste we ignored have come back to haunt us!  '
+  - Then what should we do now?! We can't turn back time and just not throw these
+    trash, it's already been done!
   imageArray:
   - {fileID: 21300000, guid: 1954000b4a4be4a128a8df39d64d28d3, type: 3}
   - {fileID: 21300000, guid: 52d4a60217a6040a1abe45e5e0faf0f7, type: 3}
   - {fileID: 21300000, guid: 05c29366d04a34fde904af5967e9ad03, type: 3}
-  - {fileID: 21300000, guid: 05c29366d04a34fde904af5967e9ad03, type: 3}
-  - {fileID: 21300000, guid: 0161f546d926446a6b1ab4e23303c80a, type: 3}
-  - {fileID: 21300000, guid: 0161f546d926446a6b1ab4e23303c80a, type: 3}
-  - {fileID: 21300000, guid: 52d4a60217a6040a1abe45e5e0faf0f7, type: 3}
-  - {fileID: 21300000, guid: d1dd2c829627c4ce5a47dbd278a6dc04, type: 3}
   - {fileID: 21300000, guid: d1dd2c829627c4ce5a47dbd278a6dc04, type: 3}
   displayDuration: 4
   fadeDuration: 0.5
@@ -13157,9 +13150,9 @@ MonoBehaviour:
   spawnArea: {x: 30, y: 1, z: 40}
   initialSpawnRate: 0.05
   finalSpawnRate: 2
-  rainDuration: 50
+  rainDuration: 80
   rateIncreaseDuration: 5
-  initialDuration: 20
+  initialDuration: 45
   spawnHeight: 20
 --- !u!4 &1146835493
 Transform:
@@ -14313,9 +14306,9 @@ MonoBehaviour:
   spawnArea: {x: 30, y: 1, z: 40}
   initialSpawnRate: 0.05
   finalSpawnRate: 2
-  rainDuration: 50
+  rainDuration: 80
   rateIncreaseDuration: 5
-  initialDuration: 20
+  initialDuration: 45
   spawnHeight: 20
 --- !u!4 &1222818538
 Transform:
@@ -15959,9 +15952,9 @@ MonoBehaviour:
   spawnArea: {x: 30, y: 1, z: 40}
   initialSpawnRate: 0.8
   finalSpawnRate: 3
-  rainDuration: 50
+  rainDuration: 80
   rateIncreaseDuration: 5
-  initialDuration: 20
+  initialDuration: 45
   spawnHeight: 20
 --- !u!4 &1355655879
 Transform:
@@ -19956,7 +19949,7 @@ RectTransform:
   - {fileID: 2080494500}
   - {fileID: 1585746580}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -20412,7 +20405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17a189a7343a349dd9f9a55b369e1710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: LowPoly
+  nextSceneName: Big
 --- !u!4 &1924978751
 Transform:
   m_ObjectHideFlags: 0
@@ -20814,9 +20807,9 @@ MonoBehaviour:
   spawnArea: {x: 30, y: 1, z: 40}
   initialSpawnRate: 0.05
   finalSpawnRate: 2
-  rainDuration: 50
+  rainDuration: 80
   rateIncreaseDuration: 5
-  initialDuration: 20
+  initialDuration: 45
   spawnHeight: 20
 --- !u!4 &1975827125
 Transform:
@@ -20923,6 +20916,100 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f1b16b653a4bf41e39d567964bea1ee7, type: 3}
   m_PrefabInstance: {fileID: 1986412507}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1996944193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1996944195}
+  - component: {fileID: 1996944194}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1996944194
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996944193}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 1
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &1996944195
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996944193}
+  m_LocalRotation: {x: 0.38062057, y: 0.393879, z: -0.18366882, w: 0.8162433}
+  m_LocalPosition: {x: -76.1137, y: 69.948204, z: -27.045612}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 50, y: 51.519, z: 0}
 --- !u!1 &2000279830
 GameObject:
   m_ObjectHideFlags: 0
@@ -22529,9 +22616,9 @@ MonoBehaviour:
   spawnArea: {x: 30, y: 1, z: 40}
   initialSpawnRate: 0.8
   finalSpawnRate: 3
-  rainDuration: 50
+  rainDuration: 80
   rateIncreaseDuration: 5
-  initialDuration: 20
+  initialDuration: 45
   spawnHeight: 20
 --- !u!4 &2137639138
 Transform:

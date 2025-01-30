@@ -31,7 +31,7 @@ public class TextCycler : MonoBehaviour
 
     private IEnumerator CycleContent()
     {
-        while (true)
+        while (currentIndex < textArray.Length)
         {
             // Wait before showing new content
             yield return new WaitForSeconds(transitionDuration);
@@ -52,7 +52,7 @@ public class TextCycler : MonoBehaviour
             yield return new WaitForSeconds(transitionDuration);
 
             // Move to the next content index
-            currentIndex = (currentIndex + 1) % textArray.Length;
+            currentIndex++;
         }
     }
 
@@ -93,3 +93,5 @@ public class TextCycler : MonoBehaviour
         imageComponent.color = new Color(imageColor.r, imageColor.g, imageColor.b, 1f);
     }
 }
+
+
